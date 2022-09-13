@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/Products.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="classTitle">Estoque produtos</h1>
+    </header>
+    <div class="wrapper">
+        <button id="displayDivAddNewProduct" class="btn btnBlue">Adicionar novo produto</button>
+        <button id="displayHistoryDiv" class="btn btnBlue">Histórico</button>
+        <button id="deleteItems" class="btn btnRed">Delete</button><br/><br/>
+        <div class="productList">
+            <table class="productTable">
+                <thead>
+                    <tr>
+                        <th>Deletar</th>
+                        <th>Nome</th>
+                        <th>Código</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody id="storageItems"></tbody>
+            </table>
+        </div>
+        <div id="divAddNewProduct" class="productHiddenDiv">
+            <h3>Novo produto</h3>
+            <form id="newProductForm" method="post">
+                <input type="text" name="nameProd" id="nameProd" placeholder="Nome do produto" /><br/>
+                <input type="text" name="codeProd" id="codeProd" placeholder="Código do produto" /><br/>
+                <input type="number" min="0" name="inStorage" id="inStorage" placeholder="Número no estoque" /><br/>
+                <input type="text" name="prodPrice" id="prodPrice" placeholder="Preço unitário"><br/>
+                <button type="submit" class="btn btnGreen">Adicionar</button>
+                <button id="closeDivAddNewProduct" class="btn btnRed">Fechar</button><br/>
+                <small id="newProductMessages"></small>
+            </form>
+        </div>
+        <div id="productDetails" class="productHiddenDiv">
+            <h3>Detalhes</h3>
+            <form id="updateProductForm" method="post">
+                <input type="hidden" name="productIdUp" id="productIdUp" value="" />
+                Nome: <input type="text" name="nameUpProd" id="nameUpProd" placeholder="Nome do produto" /><br/>
+                Estoque: <input type="number" min="0" name="inStorageUp" id="inStorageUp" placeholder="Número no estoque" /><br/>
+                Preço: <input type="text" name="prodUpPrice" id="prodUpPrice" placeholder="Preço unitário"><br/>
+                <button type="submit" class="btn btnGreen">Atualizar</button>
+                <button id="closeDivUpdateProductForm" class="btn btnRed">Fechar</button><br/>
+                <small id="updateProductMessages"></small>
+            </form>
+        </div>
+        <div id="storageHistory" class="productHiddenDiv">
+            <h3>Historico</h3>
+            <table class="historyTable" border="1">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Código</th>
+                        <th>Estoque</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody id="productsHistory"></tbody>
+            </table>
+            <button id="closeStorageHistory" class="btn btnRed">Fechar</button>
+        </div>
+        <div id="darkBackground" class="darkBackground"></div>
+    </div>
+</body>
+</html>

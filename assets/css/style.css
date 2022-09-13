@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dcdcdc;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #888;
+}
+
+.wrapper {
+    width: 70%;
+    margin: 7% 0 0 15%;
+    text-align: center;
+}
+
+.classTitle {
+    color: #222;
+    margin: 10px;
+}
+
+.productTable {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.productTable th {
+    padding: 12px;
+    background-color: #64B5F6;
+    color: #fff;
+    border: 1px solid #0288D1;
+}
+
+.productTable td{
+    border: 1px solid #bbb;
+    padding: 4px;
+    background-color: #fff;
+}
+  
+.productTable tr:hover { background-color: #ddd;}
+
+.productHiddenDiv {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    position: fixed;
+    width: 50%;
+    left: 25%;
+    top: 6%;
+    z-index: 100;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.productHiddenDiv form { margin: 10px;}
+
+.productHiddenDiv form input[type=text],
+.productHiddenDiv form input[type=number],
+.productHiddenDiv form button { margin: 5px;}
+
+.productHiddenDiv form input[type=text],
+.productHiddenDiv form input[type=number] {
+    width: 70%;
+    border: 1px solid #dcdcdc;
+    padding: 4px;
+    border-radius: 4px;
+    color: #555;
+}
+
+.productHiddenDiv h3 {
+    background-color: #64B5F6;
+    padding: 20px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.darkBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 95;
+}
+
+.historyTable { 
+    width: 100%;
+    margin: 10px 0;
+}
+
+.btn {
+    border: 1px solid;
+    padding: 4px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.btnBlue {
+    border-color: #0277BD;
+    background-color: #2196F3;
+}
+
+.btnGreen {
+    border-color: #00796B;
+    background-color: #009688;
+}
+
+.btnRed {
+    border-color: #D32F2F;
+    background-color: #F44336;
+}
+
+#newProductMessages,
+#updateProductMessages { color: #D32F2F;}

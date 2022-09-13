@@ -1,0 +1,20 @@
+create database inventory;
+
+use inventory;
+
+create table products(
+    id int not null primary key auto_increment,
+    name varchar(100) not null,
+    code varchar(255) unique not null,
+    in_storage int unsigned not null default 0,
+    price float not null default 0.00
+);
+
+create table history(
+    id int not null primary key auto_increment,
+    name varchar(100) not null,
+    code varchar(255),
+    new_storage int unsigned not null default 0,
+    updated_at datetime not null,
+    constraint co_fk foreign key(code) references products(code) on delete cascade on update cascade
+);
